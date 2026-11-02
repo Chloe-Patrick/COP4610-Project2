@@ -1,18 +1,20 @@
 obj-m += syscheck.o
 
-all: syscheck.ko test-syscalls
-
-run:
-	./test-syscalls
-
-test_syscalls: test-syscalls.c test-syscalls.h
-	gcc test-syscalls -o test_syscalls
-
-syscheck.ko: syscheck.c
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+KDIR ?= /lib/modules/$(shell uname -r)/build
 
 .PHONY: all clean run
 
+all: syscheck.ko test-syscalls
+
+syscheck.ko: syscheck.c
+	$(MAKE) -C $(KDIR) M=$(CURDIR) modules
+
+test-syscalls: test-syscalls.c test-syscalls.h
+	$(CC) -Wall -Wextra -o $@ test-syscalls.c
+
+run: test-syscalls
+	./test-syscalls
+
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-	rm test-syscalls
+	$(MAKE) -C $(KDIR) M=$(CURDIR) clean
+	rm -f test-syscalls
