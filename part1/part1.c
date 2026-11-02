@@ -1,0 +1,14 @@
+#define _GNU_SOURCE
+#include <sys/syscall.h>
+#include <unistd.h>
+
+/* Exactly five explicit Linux system calls, with no printf or I/O. */
+int main(void)
+{
+    syscall(SYS_getpid);
+    syscall(SYS_getppid);
+    syscall(SYS_getuid);
+    syscall(SYS_geteuid);
+    syscall(SYS_getgid);
+    return 0;
+}

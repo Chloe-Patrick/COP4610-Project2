@@ -1,0 +1,31 @@
+# Binaries generated from Part 1
+part1/empty
+part1/part1
+
+# Binaries generated from the provided Part 3 tests
+part3/tests/elevator-test/consumer
+part3/tests/elevator-test/producer
+part3/tests/system-calls-test/test-syscalls
+
+# Kernel modules and object/build products
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.order
+*.symvers
+*.a
+*.d
+.tmp_versions/
+.cache.mk
+modules.order
+Module.symvers
+.*.cmd
+
+# Editor and OS clutter
+.DS_Store
+*~
+
+# Deliberately NOT ignored: part1/*.trace (required deliverables)
