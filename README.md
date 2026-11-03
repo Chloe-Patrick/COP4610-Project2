@@ -215,9 +215,7 @@ integration and runtime tests for the completed elevator module.
 
 ## Development log
 
-See `DEVELOPMENT_LOG.md`. It records Chloe's development and integration tests
-and Alexander's assigned implementation areas. Add Alexander's actual dates,
-debugging notes, and any group meeting details before submission.
+See `DEVELOPMENT_LOG.md`. 
 
 ## Group meetings and communication
 
