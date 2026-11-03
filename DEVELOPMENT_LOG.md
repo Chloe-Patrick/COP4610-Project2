@@ -39,25 +39,7 @@ show differences. Do not claim unverified work or meetings.
 - Part 3f — Scheduling Algorithm: floor movement, boarding and unloading,
   capacity and weight restrictions, and service decisions.
 
-**Implementation dates, debugging decisions, and commits:**
-[ADD ALEXANDER'S ACTUAL DEVELOPMENT NOTES; DATES HAVE NOT BEEN PROVIDED]
 
 Chloe performed the recorded compilation, integration, and runtime tests of the
 complete elevator module on the custom Linux kernel.
 
-## Group meetings / coordination
-
-| Date | Participants | What was discussed / decided |
-| --- | --- | --- |
-| [DATE] | [NAMES] | [REAL MEETING OR COORDINATION] |
-
-If there were no formal meetings, replace this table with an accurate account
-of asynchronous coordination (if any). Do not invent meeting records.
-
-## Remaining checks
-
-- [ ] Independently verify strict FIFO boarding from controlled inputs.
-- [ ] Verify travel and load/unload delays against timestamps.
-- [ ] Run concurrent producer tests while checking module stability.
-- [ ] Add Alexander's actual development dates and group communication notes.
-- [ ] Run the full demonstration from a clean Git checkout.
