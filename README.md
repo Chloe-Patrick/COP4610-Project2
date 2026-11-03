@@ -183,10 +183,6 @@ runs, not exhaustive proof for all inputs.
 | Restart / stop / unload | Start and stop returned 0; `/proc/elevator` removed |
 | Capacity observation | No observed run exceeded 5 pets or 50 lbs |
 
-**Still to verify independently:** strict FIFO ordering, timing accuracy,
-and simultaneous-request concurrency under stress. The provided producer
-sometimes requests floor 6, while the project specification allows only
-floors 1-5; rejecting those requests is expected behavior.
 
 ## Division of labor
 
